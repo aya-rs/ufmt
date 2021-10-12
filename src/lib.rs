@@ -194,7 +194,6 @@
 #![deny(missing_docs)]
 #![deny(rust_2018_compatibility)]
 #![deny(rust_2018_idioms)]
-#![deny(warnings)]
 
 // this lets us use `uwrite!` in the test suite
 #[allow(unused_extern_crates)]

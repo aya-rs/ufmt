@@ -1,3 +1,8 @@
+# `aya-ufmt`
+
+This is a fork of https://github.com/japaric/ufmt, tweaked to play nice with the
+eBPF kernel verifier.
+
 # `μfmt`
 
 > A (6-40x) smaller, (2-9x) faster and panic-free alternative to `core::fmt`
