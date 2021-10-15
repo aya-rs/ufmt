@@ -10,7 +10,7 @@ cortex-m = "0.6.1"
 cortex-m-rt = "0.6.10"
 heapless = "0.5.1"
 panic-never = "0.1.0"
-ufmt = { path = ".." }
+aya-ufmt = { path = ".." }
 ufmt-utils = { path = "../utils" }
 
 [profile.release]
