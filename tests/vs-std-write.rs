@@ -1,13 +1,14 @@
 use core::convert::Infallible;
 use std::collections::{BTreeMap, BTreeSet};
 
-use ufmt::{derive::uDebug, uDebug, uWrite, uwrite, uwriteln, Formatter};
+use aya_ufmt as ufmt;
+use aya_ufmt::{derive::uDebug, uDebug, uWrite, uwrite, uwriteln, Formatter};
 
 macro_rules! uformat {
     ($($tt:tt)*) => {{
         let mut s = String::new();
         #[allow(unreachable_code)]
-        match ufmt::uwrite!(&mut s, $($tt)*) {
+        match aya_ufmt::uwrite!(&mut s, $($tt)*) {
             Ok(_) => Ok(s),
             Err(e) => Err(e),
         }
@@ -72,7 +73,6 @@ fn uxx() {
     cmp!("{}", u16::max_value());
     cmp!("{}", u32::max_value());
     cmp!("{}", u64::max_value());
-    cmp!("{}", u128::max_value());
     cmp!("{}", usize::max_value());
 }
 
@@ -92,8 +92,6 @@ fn ixx() {
     cmp!("{}", i32::max_value());
     cmp!("{}", i64::min_value());
     cmp!("{}", i64::max_value());
-    cmp!("{}", i128::min_value());
-    cmp!("{}", i128::max_value());
     cmp!("{}", isize::min_value());
     cmp!("{}", isize::max_value());
 }
