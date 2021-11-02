@@ -41,6 +41,7 @@
 //! - `uwrite!` / `uwriteln!`
 //!
 //! ```
+//! # use aya_ufmt as ufmt;
 //! use ufmt::{derive::uDebug, uwrite};
 //!
 //! #[derive(uDebug)]
@@ -60,6 +61,7 @@
 //! ```
 //! use core::convert::Infallible;
 //!
+//! # use aya_ufmt as ufmt;
 //! use ufmt_write::uWrite;
 //!
 //! struct MyWriter;
@@ -158,6 +160,7 @@
 //! ```
 //! use core::{convert::Infallible, fmt, ptr};
 //!
+//! # use aya_ufmt as ufmt;
 //! use ufmt::uWrite;
 //!
 //! struct W;
