@@ -6,18 +6,14 @@ macro_rules! uxx {
     ($n:expr, $buf:expr) => {{
         let mut n = $n;
         let mut i = $buf.len() - 1;
-        loop {
+        while i > 0 {
             unsafe { *$buf.get_unchecked_mut(i) = (n % 10) as u8 + b'0' };
             n = n / 10;
 
             if n == 0 {
                 break;
             } else {
-                if (i > 0) {
-                    i -= 1;
-                } else {
-                    break;
-                }
+                i -= 1;
             }
         }
 
